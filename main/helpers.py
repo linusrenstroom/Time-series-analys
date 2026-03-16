@@ -37,5 +37,8 @@ def windowed_dataset(series, window_size, batch_size, shuffle_buffer):
     dataset = dataset.flat_map(lambda window: window.batch(window_size + 1))
     dataset = dataset.shuffle(shuffle_buffer).map(
         lambda window: (window[:-1], window[-1]))
-    dataset = dataset.batch(batch_size).prefetch(1)
+    dataset = (dataset.batch(batch_size))
+    dataset = dataset.repeat()
+    dataset = dataset.prefetch(1)
+
     return dataset
