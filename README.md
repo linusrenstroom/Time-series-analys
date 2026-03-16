@@ -1,6 +1,6 @@
 A neural network model that learns to forecast a synthetic time series built from trend, seasonality, and noise components.
 This project generates a synthetic time series and trains a simple dense neural network to predict future values using a sliding window approach.
-It's a practical introduction to time series forecasting with Keras
+It's a practical introduction to time series forecasting with Keras.
 
 
 
