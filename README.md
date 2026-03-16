@@ -4,8 +4,12 @@ It's a practical introduction to time series forecasting with Keras.
 
 
 
-├── utils.py       # Helper functions (data generation, windowing, plotting)
-├── train.py       # Data prep, model definition, and training
-├── predict.py     # Load saved model and run predictions
-├── model.keras    # Saved model (generated after training)
-└── series.npy     # Saved series data (generated after training)
+── utils.py       # Helper functions (data generation, windowing, plotting)
+
+── train.py       # Data prep, model definition, and training
+
+── predict.py     # Load saved model and run predictions
+
+── model.keras    # Saved model (generated after training)
+
+── series.npy     # Saved series data (generated after training)
