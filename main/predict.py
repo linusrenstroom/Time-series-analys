@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from helpers import plot_series
+from main.helpers import plot_series
 import matplotlib.pyplot as plt
 
 model = tf.keras.models.load_model("models/model.keras")

@@ -1,7 +1,11 @@
+import os
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
-from helpers import trend, seasonality, noise, windowed_dataset
+from main.helpers import trend, seasonality, noise, windowed_dataset
+
+os.makedirs("models", exist_ok=True)
+os.makedirs("data", exist_ok=True)
 
 # Data
 time = np.arange(4 * 365 + 1, dtype="float32")
@@ -37,7 +41,7 @@ model.compile(
 )
 
 model.fit(dataset, epochs=100, verbose=1)
-model.save("model.keras")
+model.save("models/model.keras")
 
-np.save("series/series.npy", series)
+np.save("data/series.npy", series)
 print("Training complete. Model saved to model.keras")
