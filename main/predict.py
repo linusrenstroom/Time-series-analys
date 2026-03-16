@@ -4,7 +4,7 @@ from main.helpers import plot_series
 import matplotlib.pyplot as plt
 
 model = tf.keras.models.load_model("models/model.keras")
-series = np.load("series/series.npy")
+series = np.load("data/series.npy")
 
 split_time = 1000
 window_size = 20
